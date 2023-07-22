@@ -1,0 +1,9 @@
+python-dotenv[cli]
+langchain
+huggingface_hub
+torch
+transformers
+diffusers[torch]
+accelerate
+streamlit
+Pillow
