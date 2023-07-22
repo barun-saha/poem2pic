@@ -34,7 +34,7 @@ and the underlying AI models.</small></p>
 st.markdown(footer, unsafe_allow_html=True)
 
 poem = st.text_area(
-    f'''**Type or copy paste a poem (max. {Config.LLM_MAX_INPUT_LENGTH} characters will be considered):**''',
+    f'''**Type or copy-paste a poem (max. {Config.LLM_MAX_INPUT_LENGTH} characters will be considered):**''',
     ''
 )
 
@@ -63,4 +63,4 @@ if st.button('Generate image'):
         progress_bar.progress(100, text='Done!')
 
         st.image(image, caption=summary)
-        st.info('(Right-click on the image to save it)', icon='️ ')
+        st.info('Tip: Right-click on the image to save it')
