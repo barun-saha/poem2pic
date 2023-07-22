@@ -63,4 +63,4 @@ if st.button('Generate image'):
         progress_bar.progress(100, text='Done!')
 
         st.image(image, caption=summary)
-        st.info('(Right-click on the image to save it)', icon='ℹ️ ')
+        st.info('(Right-click on the image to save it)', icon='️ ')
