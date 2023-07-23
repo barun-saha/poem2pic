@@ -13,7 +13,7 @@ class Config:
     LLM_MODEL_NAME: str = 'google/flan-t5-xxl'
     LLM_TEMPERATURE: float = 0.5
     LLM_MAX_OUTPUT_LENGTH: int = 100
-    LLM_MAX_INPUT_LENGTH: int = 512
+    LLM_MAX_INPUT_LENGTH: int = 1000
 
     # Stable Diffusion
     DIFFUSION_MODEL_NAME: str = 'stabilityai/stable-diffusion-2-1'

@@ -39,9 +39,8 @@ poem = st.text_area(
 )
 
 if st.button('Generate image'):
-    progress_text = 'Generating image...give it a moment'
+    progress_text = 'Summarizing the poem...give it a moment'
     progress_bar = st.progress(0, text=progress_text)
-    progress_bar.progress(1, text=progress_text)
 
     poem = poem.strip()
     input_length = len(poem)
@@ -49,15 +48,12 @@ if st.button('Generate image'):
     if input_length > 0:
         print(poem)
 
-        if input_length <= 5:
-            summary = poem
-        else:
-            target_length = min(input_length, Config.LLM_MAX_INPUT_LENGTH)
-            summary = generate_summary(poem[:target_length])
+        target_length = min(input_length, Config.LLM_MAX_INPUT_LENGTH)
+        summary = generate_summary(poem[:target_length])
 
         print(f'Summary: {summary}')
         st.write(f'''Summary: {summary}''')
-        progress_bar.progress(25, text='Summary generated...need a few more minutes')
+        progress_bar.progress(10, text='Generating image...need a few more minutes')
 
         image = generate_image_from_text(summary)
         progress_bar.progress(100, text='Done!')
