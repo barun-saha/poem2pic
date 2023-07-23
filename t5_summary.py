@@ -11,7 +11,7 @@ llm = HuggingFaceHub(
 # print(llm)
 
 template = '''
-You are a helpful assistant who can review literature and poetry.
+You are an AI assistant who can review literature and poetry.
 A poem consists of one or more stanzas. A stanza may contain as few as a single line. 
 Consecutive stanzas are separated by blank lines. Generally, the stanzas stand out differently.
 Consider the following poem: 
