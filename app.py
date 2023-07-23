@@ -33,9 +33,18 @@ and the underlying AI models.</small></p>
 """
 st.markdown(footer, unsafe_allow_html=True)
 
+preload_text = ''
+
+try:
+    with open('examples/old_pond.txt', 'r', encoding='utf8') as in_file:
+        preload_text = in_file.read().strip()
+except Exception:
+    pass
+
 poem = st.text_area(
-    f'''**Type or copy-paste a poem (max. {Config.LLM_MAX_INPUT_LENGTH} characters will be considered):**''',
-    ''
+    f'''**Type or copy-paste a poem or start off with the following haiku 
+    (max. {Config.LLM_MAX_INPUT_LENGTH} characters will be considered):**''',
+    preload_text
 )
 
 if st.button('Generate image'):
