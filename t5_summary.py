@@ -11,13 +11,17 @@ llm = HuggingFaceHub(
 # print(llm)
 
 template = '''
-You are a helpful assistant who can answer questions about literature and poetry. You are creative. 
+You are a helpful assistant who can review literature and poetry.
+A poem consists of one or more stanzas. A stanza may contain as few as a single line. 
+Consecutive stanzas are separated by blank lines. Generally, the stanzas stand out differently.
 Consider the following poem: 
 
 {poem}
 
+
 Write a creative summary of the poem in about 20 words. 
-The summary should try to capture the subject, objects, key themes, and sentiments.
+The summary should try to capture the subjects, objects, key themes, and sentiments.
+The summary should avoid verbatim use of lines from the poem.
 '''
 
 prompt = PromptTemplate.from_template(template)
